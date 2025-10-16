@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../NCD1inch_PolyEthylene"
+		},
+		{
+			"path": "../../Sources4C"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.icc": "cpp"
+		}
+	}
+}
