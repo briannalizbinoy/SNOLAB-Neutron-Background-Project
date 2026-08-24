@@ -214,6 +214,78 @@ src/DetectorConstruction.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/DetectorConstruction.cc.s
 .PHONY : src/DetectorConstruction.cc.s
 
+src/ElectromagneticPhysics.o: src/ElectromagneticPhysics.cc.o
+.PHONY : src/ElectromagneticPhysics.o
+
+# target to build an object file
+src/ElectromagneticPhysics.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/ElectromagneticPhysics.cc.o
+.PHONY : src/ElectromagneticPhysics.cc.o
+
+src/ElectromagneticPhysics.i: src/ElectromagneticPhysics.cc.i
+.PHONY : src/ElectromagneticPhysics.i
+
+# target to preprocess a source file
+src/ElectromagneticPhysics.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/ElectromagneticPhysics.cc.i
+.PHONY : src/ElectromagneticPhysics.cc.i
+
+src/ElectromagneticPhysics.s: src/ElectromagneticPhysics.cc.s
+.PHONY : src/ElectromagneticPhysics.s
+
+# target to generate assembly for a file
+src/ElectromagneticPhysics.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/ElectromagneticPhysics.cc.s
+.PHONY : src/ElectromagneticPhysics.cc.s
+
+src/HadronElasticPhysicsHP.o: src/HadronElasticPhysicsHP.cc.o
+.PHONY : src/HadronElasticPhysicsHP.o
+
+# target to build an object file
+src/HadronElasticPhysicsHP.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/HadronElasticPhysicsHP.cc.o
+.PHONY : src/HadronElasticPhysicsHP.cc.o
+
+src/HadronElasticPhysicsHP.i: src/HadronElasticPhysicsHP.cc.i
+.PHONY : src/HadronElasticPhysicsHP.i
+
+# target to preprocess a source file
+src/HadronElasticPhysicsHP.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/HadronElasticPhysicsHP.cc.i
+.PHONY : src/HadronElasticPhysicsHP.cc.i
+
+src/HadronElasticPhysicsHP.s: src/HadronElasticPhysicsHP.cc.s
+.PHONY : src/HadronElasticPhysicsHP.s
+
+# target to generate assembly for a file
+src/HadronElasticPhysicsHP.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/HadronElasticPhysicsHP.cc.s
+.PHONY : src/HadronElasticPhysicsHP.cc.s
+
+src/NeutronHPMessenger.o: src/NeutronHPMessenger.cc.o
+.PHONY : src/NeutronHPMessenger.o
+
+# target to build an object file
+src/NeutronHPMessenger.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/NeutronHPMessenger.cc.o
+.PHONY : src/NeutronHPMessenger.cc.o
+
+src/NeutronHPMessenger.i: src/NeutronHPMessenger.cc.i
+.PHONY : src/NeutronHPMessenger.i
+
+# target to preprocess a source file
+src/NeutronHPMessenger.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/NeutronHPMessenger.cc.i
+.PHONY : src/NeutronHPMessenger.cc.i
+
+src/NeutronHPMessenger.s: src/NeutronHPMessenger.cc.s
+.PHONY : src/NeutronHPMessenger.s
+
+# target to generate assembly for a file
+src/NeutronHPMessenger.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/NeutronHPMessenger.cc.s
+.PHONY : src/NeutronHPMessenger.cc.s
+
 src/PhysicsList.o: src/PhysicsList.cc.o
 .PHONY : src/PhysicsList.o
 
@@ -310,6 +382,30 @@ src/SensitiveDetector.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/SensitiveDetector.cc.s
 .PHONY : src/SensitiveDetector.cc.s
 
+src/SteppingAction.o: src/SteppingAction.cc.o
+.PHONY : src/SteppingAction.o
+
+# target to build an object file
+src/SteppingAction.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/SteppingAction.cc.o
+.PHONY : src/SteppingAction.cc.o
+
+src/SteppingAction.i: src/SteppingAction.cc.i
+.PHONY : src/SteppingAction.i
+
+# target to preprocess a source file
+src/SteppingAction.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/SteppingAction.cc.i
+.PHONY : src/SteppingAction.cc.i
+
+src/SteppingAction.s: src/SteppingAction.cc.s
+.PHONY : src/SteppingAction.s
+
+# target to generate assembly for a file
+src/SteppingAction.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/SteppingAction.cc.s
+.PHONY : src/SteppingAction.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -329,6 +425,15 @@ help:
 	@echo "... src/DetectorConstruction.o"
 	@echo "... src/DetectorConstruction.i"
 	@echo "... src/DetectorConstruction.s"
+	@echo "... src/ElectromagneticPhysics.o"
+	@echo "... src/ElectromagneticPhysics.i"
+	@echo "... src/ElectromagneticPhysics.s"
+	@echo "... src/HadronElasticPhysicsHP.o"
+	@echo "... src/HadronElasticPhysicsHP.i"
+	@echo "... src/HadronElasticPhysicsHP.s"
+	@echo "... src/NeutronHPMessenger.o"
+	@echo "... src/NeutronHPMessenger.i"
+	@echo "... src/NeutronHPMessenger.s"
 	@echo "... src/PhysicsList.o"
 	@echo "... src/PhysicsList.i"
 	@echo "... src/PhysicsList.s"
@@ -341,6 +446,9 @@ help:
 	@echo "... src/SensitiveDetector.o"
 	@echo "... src/SensitiveDetector.i"
 	@echo "... src/SensitiveDetector.s"
+	@echo "... src/SteppingAction.o"
+	@echo "... src/SteppingAction.i"
+	@echo "... src/SteppingAction.s"
 .PHONY : help
 
 
