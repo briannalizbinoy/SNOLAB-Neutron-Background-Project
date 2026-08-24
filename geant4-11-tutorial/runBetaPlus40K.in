@@ -1,0 +1,43 @@
+#  ------------
+# LH 2023-08
+#  ------------
+#
+# Macro file for use with "NaIWithVial"
+# 
+#
+## --------- general ---------- ##
+#
+/control/verbose  2
+/control/cout/ignoreThreadsExcept 0 
+/run/verbose 2
+#
+# analysis sub-directory
+# can also set file name with /analysisOut/setFileName <name>
+/analysisOut/setSubDirName BetaPlus40K_1e7
+#
+#
+## ---------   GPS    ---------- ##
+#
+/gps/verbose 0
+/gps/particle e+
+#
+/gps/ene/type User
+/gps/hist/type energy
+/control/execute BetaPlusEnergyDist40K.mac
+#
+/gps/position 0 0 0 cm
+/gps/ang/type iso 
+/gps/pos/type Volume
+#
+# first construct some sampling volume larger than detector to confine to
+/gps/pos/shape Sphere
+/gps/pos/radius 10 cm
+### ENSURE NO HALF-DIM OF CONFINING VOLUME IS > DIM ABOVE
+/gps/pos/confine DetectorB1
+#
+#
+## ---------   Run    ---------- ##
+#
+/run/printProgress 100000
+#
+/run/beamOn 10000000
