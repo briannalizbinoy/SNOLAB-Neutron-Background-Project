@@ -7,13 +7,33 @@
 #include "G4SystemOfUnits.hh"
 #include "G4UnitsTable.hh"
 
-class RunAction : public G4UserRunAction
-{
+    
+
+class RunAction : public G4UserRunAction {
 public:
     RunAction();
-    ~RunAction();
+    virtual ~RunAction();
 
-    virtual void BeginOfRunAction(const G4Run *);
-    virtual void EndOfRunAction(const G4Run *);
+    virtual void BeginOfRunAction(const G4Run*);
+    virtual void EndOfRunAction(const G4Run*);
+    // Counter for He-4 elastic events (from SteppingAction)
+    void CountHe4Elastic() { fHeElasticCount++; }
+    void CountNeutronEntry() { neutronEntryCount++; }
+    static std::atomic<int> neutronEntryCount;
+
+private:
+    G4int fHeElasticCount = 0;
 };
+
 #endif
+
+
+// class RunAction : public G4UserRunAction
+// {
+// public:
+//     RunAction();
+//     ~RunAction();
+
+//     virtual void BeginOfRunAction(const G4Run *);
+//     virtual void EndOfRunAction(const G4Run *);
+// };

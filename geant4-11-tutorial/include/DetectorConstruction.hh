@@ -10,6 +10,7 @@
 #include "G4VPhysicalVolume.hh"
 #include "G4PVPlacement.hh"
 #include "G4Material.hh"
+#include <vector>
 
 #include "G4NistManager.hh"
 #include "G4SystemOfUnits.hh"
@@ -34,7 +35,16 @@ public:
     virtual G4VPhysicalVolume *Construct();
 
 private:
-    G4LogicalVolume *logicDetector;
+    G4LogicalVolume* logicShell;
+    G4LogicalVolume* logicCap;
+    G4LogicalVolume* logicHe4;
+    G4LogicalVolume* logicLiF;
+    G4LogicalVolume* logicCap1;
+    G4LogicalVolume* logicCap2;
+    G4LogicalVolume* logicShield;
+    G4LogicalVolume* logicD2OShield;
+
+
 
     virtual void ConstructSDandField();
 };
