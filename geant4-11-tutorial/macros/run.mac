@@ -1,5 +1,80 @@
+#/run/numberOfThreads 4
+#/run/initialize
+
+
+#/control/execute rock_plus_shotcrete_spectrum.mac
+
+
+#/gps/particle neutron
+#/gps/ene/mono 0.025 eV
+#/gps/pos/type Surface
+#/gps/pos/shape Cylinder
+#/gps/pos/radius 35.5 mm
+#/gps/pos/centre 0 0 0 m
+#/gps/pos/halfz 335.5 mm
+#/gps/ang/type cos       # isotropic emission
+#/gps/ang/surfnorm true
+
+#/run/beamOn 100000
+
+
 /run/numberOfThreads 4
-
 /run/initialize
-
+# =========================================================
+# 252Cf SOURCE
+# =========================================================
+/gps/particle neutron
+/gps/pos/type Point
+/gps/pos/centre 35.5 0.0 0.0 mm
+/gps/ang/type iso
+# ---------------------------------------------------------
+# 252Cf neutron energy spectrum
+# Watt spectrum
+# a = 1.025 MeV
+# b = 2.926 MeV^-1
+# ---------------------------------------------------------
+/gps/ene/type Arb
+/gps/hist/type arb
+/gps/hist/file Cf252_Watt.txt
+/gps/hist/inter Lin
 /run/beamOn 100000
+
+# Load the energy spectrum
+#/run/numberOfThreads 4
+#/run/initialize
+
+#/control/execute rock_plus_shotcrete_spectrum.mac
+
+# Define a box cavern source (e.g., 10m x 10m x 10m cavern)
+#/gps/pos/type Surface
+#/gps/pos/shape Para
+#/gps/pos/halfx 1.5 m
+#/gps/pos/halfy 1.5 m
+#/gps/pos/halfz 5 m
+
+# Angular distribution: Cosine-law (Lambertian) inward-directed flux from rock
+#/gps/ang/type cos
+#/run/beamOn 100000
+
+# Load the spectrum macro
+#/control/execute norite_spectrum.mac
+
+# Particle type
+#/gps/particle neutron
+
+# Spatial sampling volume (Bounding Box outer dimensions)
+#/gps/pos/type Volume
+#/gps/pos/shape Para
+#/gps/pos/halfx 500.0 cm
+#/gps/pos/halfy 500.0 cm
+#/gps/pos/halfz 650.0 cm
+#/gps/pos/centre 0 0 0 cm
+
+# Restrict generation strictly inside the wall volume
+#/gps/pos/confine CavernWalls_PV
+
+# Emit isotropically in 3D space from the wall points
+#/gps/ang/type iso
+
+# Run simulation
+#/run/beamOn 1000000
